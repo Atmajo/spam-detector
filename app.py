@@ -18,12 +18,24 @@ class Main:
         result = process.isSpam()
         
         return result
-
-@app.route('/predict', methods=['GET'])
-def predict():
+    
+@app.route('/test', methods=['GET'])
+def test():
     file = './spamwords.csv'
     
     text = 'click the link below to get xxx free, earn money'
+    text = np.array(text.lower().split(" "))
+    
+    main = Main(file, text)
+    prediction = main.main()
+    
+    return flask.jsonify({'prediction': prediction})
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    file = './spamwords.csv'
+    
+    text = flask.request.json['text']
     text = np.array(text.lower().split(" "))
     
     main = Main(file, text)

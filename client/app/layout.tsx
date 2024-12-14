@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Despamify",
   description: "Check the spam rate of your writing",
+  icons: [
+    {
+      rel: "icon",
+      url: "/assets/logo.svg",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -32,11 +38,7 @@ export default function RootLayout({
         <Image
           src={"/assets/texture.svg"}
           alt="texture"
-          className="absolute top-0 left-0 w-screen h-screen"
-          objectFit="cover"
-          objectPosition="center"
-          loading="eager"
-          priority
+          className="absolute top-0 left-0 w-screen h-screen object-cover"
           fill
         />
       </body>

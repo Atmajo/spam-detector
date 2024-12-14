@@ -1,8 +1,10 @@
 import flask
 import numpy as np
 from main import Read, Process
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
+CORS(app, origins="*")
 
 class Main:
     def __init__(self, file, text):

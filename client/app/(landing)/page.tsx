@@ -40,7 +40,7 @@ export default function Home() {
         <Textarea
           name="text"
           disabled={mutation.isPending}
-          className="w-96 h-96 bg-white/10 border rounded-2xl border border-black/55"
+          className="w-96 h-96 bg-white/10 border rounded-2xl border-black/55"
         />
         <Button
           type="submit"

@@ -43,6 +43,7 @@ def predict():
     main = Main(file, text)
     prediction = main.main()
     
+    
     return flask.jsonify({'prediction': prediction})
 
 if __name__ == '__main__':

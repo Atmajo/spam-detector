@@ -8,7 +8,7 @@ export default function Home() {
   const mutation = useMutation({
     mutationFn: async (body: FormData) => {
       const response = await fetch(
-        "https://spam-detection.tekniche.xyz/predict",
+        `${process.env.NEXT_PUBLIC_API_URL}/predict`,
         {
           method: "POST",
           headers: {
